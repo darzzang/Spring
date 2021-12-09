@@ -21,7 +21,8 @@
 				<th width="150">권 한</th>
 			</tr>
 			<c:forEach items="${members}" var="member">
-				<tr>
+				<tr onmouseover="this.style.background='yellow'" 
+					onmouseout="this.style.background='white'">
 					<td>${member.id}</td>
 					<td>${member.password}</td>
 					<td>${member.name}</td>
