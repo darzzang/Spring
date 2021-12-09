@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.micol.prj.board.command.BoardInsert;
+import co.micol.prj.board.command.BoardInsertForm;
 import co.micol.prj.board.command.BoardSelect;
 import co.micol.prj.board.command.BoardSelectList;
 import co.micol.prj.comm.Command;
@@ -35,6 +37,8 @@ public class FronController extends HttpServlet {
 		map.put("/memberSelect.do", new MemberSelect());	 // 한명을 조회
 		map.put("/boardSelectList.do", new BoardSelectList()); // 게시글 목록
 		map.put("/boardSelect.do", new BoardSelect()); // 게시글 상세조회
+		map.put("/boardInsertForm.do", new BoardInsertForm());	// 글 작성 폼
+		map.put("/boardInsert.do", new BoardInsert()); // 글 저장
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

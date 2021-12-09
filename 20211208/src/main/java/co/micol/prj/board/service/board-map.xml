@@ -17,7 +17,7 @@
 		VALUES(#{no}, #{writer}, #{wdate}, #{title}, #{subject})
 	</insert>
 	
-	<update id="boardInsert" parameterType="co.micol.prj.board.service.BoardVO">
+	<update id="boardUpdate" parameterType="co.micol.prj.board.service.BoardVO">
 		UPDATE BOARD
 			SET TITLE = #{title}, subject = #{subject}
 			WHERE NO = #{no}

@@ -36,7 +36,7 @@
 		<form id="frm" action="boardSelect.do" method="post">
 			<input type="hidden" id="no" name="no">
 			<button type="button" onclick="location.href='home.do'">홈 가기</button>&nbsp;&nbsp;
-			<button type="button" onclick="location.href=''">글쓰기</button>
+			<button type="button" onclick="location.href='boardInsertForm.do'">글쓰기</button>
 		</form>
 	</div> 
 </div>
