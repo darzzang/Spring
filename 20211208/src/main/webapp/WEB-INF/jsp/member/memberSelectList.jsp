@@ -22,7 +22,8 @@
 			</tr>
 			<c:forEach items="${members}" var="member">
 				<tr onmouseover="this.style.background='yellow'" 
-					onmouseout="this.style.background='white'">
+					onmouseout="this.style.background='white'"
+					onclick="memberSearch('${member.id}')">
 					<td>${member.id}</td>
 					<td>${member.password}</td>
 					<td>${member.name}</td>
@@ -36,6 +37,20 @@
 	<div>
 		<button type="button" onclick="location.href='home.do'">홈 가기</button>
 	</div>
+	<div>
+		<form id="frm" action="memberSelect.do" method="post">
+			<!-- id는 js에서 사용, name은 java에서 사용하는 속성 -->
+			<input type="hidden" id="id" name="id">
+		</form>
+	</div>
 </div>
+
+	<!-- 사용자 JavaScript -->
+	<script type="text/javascript">
+		function memberSearch(str) {
+			frm.id.value=str;
+			frm.submit();
+		}
+	</script>
 </body>
 </html>

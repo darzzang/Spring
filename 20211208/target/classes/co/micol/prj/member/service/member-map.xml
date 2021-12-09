@@ -8,7 +8,8 @@
  	</select>
  	
  	<select id="memberSelect" resultType="co.micol.prj.member.service.MemberVO">
- 		SELECT * FROM MEMBER WHERE ID = ${id}
+ 		<!-- mybatis는 $가 아닌 #을 사용해야함 -->
+ 		SELECT * FROM MEMBER WHERE ID = #{id}
  	</select>
  	
  	<insert id="memberInsert">

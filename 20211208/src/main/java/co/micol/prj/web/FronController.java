@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.prj.comm.Command;
 import co.micol.prj.home.command.HomeCommand;
+import co.micol.prj.member.command.MemberSelect;
 import co.micol.prj.member.command.MemberSelectList;
 
 @WebServlet("*.do")
@@ -29,6 +30,7 @@ public class FronController extends HttpServlet {
 		// put(key, value)                        
 		map.put("/home.do", new HomeCommand()); // 처음으로 들어오면 메인페이지 보여주기
 		map.put("/memberSelectList.do", new MemberSelectList()); // 회원전체 조회
+		map.put("/memberSelect.do", new MemberSelect());	 // 한명을 조회
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
