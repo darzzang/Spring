@@ -10,7 +10,8 @@
 <div align="center">
 	<div><h1>Welcome to My Solution</h1></div>
 	<div>
-		<a href="memberSelectList.do">회원목록 보기</a>
+		<a href="memberSelectList.do">회원목록 보기</a><p>
+		<a href="boardSelectList.do">게시글 목록보기</a>
 	</div>
 </div>
 </body>
