@@ -13,11 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.prj.comm.Command;
 import co.micol.prj.home.command.HomeCommand;
-import co.micol.prj.member.command.MaberSelectList;
+import co.micol.prj.member.command.MemberSelectList;
 
-/**
- * Servlet implementation class FronController
- */
 @WebServlet("*.do")
 public class FronController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,8 +26,9 @@ public class FronController extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		// 요청한 command 저장하는 곳
+		// put(key, value)                        
 		map.put("/home.do", new HomeCommand()); // 처음으로 들어오면 메인페이지 보여주기
-		map.put("/memberSelectList.do", new MaberSelectList()); // 회원전체 조회
+		map.put("/memberSelectList.do", new MemberSelectList()); // 회원전체 조회
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

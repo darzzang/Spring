@@ -10,7 +10,7 @@ import co.micol.prj.member.service.MemberService;
 import co.micol.prj.member.service.MemberVO;
 import co.micol.prj.member.serviceImpl.MemberServiceImpl;
 
-public class MaberSelectList implements Command {
+public class MemberSelectList implements Command {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) {

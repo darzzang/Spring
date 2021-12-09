@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:forward page="home.do"/>
+<div align="center">
+	<div><h1>Welcome to My Solution</h1></div>
+	<div>
+		<a href="memberSelectList.do">회원목록 보기</a>
+	</div>
+</div>
 </body>
 </html>
