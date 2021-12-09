@@ -41,6 +41,12 @@ public class FronController extends HttpServlet {
 		Command command = map.get(page);
 		String viewPage = command.run(request, response);	// 처리 후 돌려줄 페이지
 		
+		// 간단한 view Resolve 만들기 - jsp 파일을 서버에서 접근해서 브라우저로 돌려주기 위해
+		if(!viewPage.endsWith(".do")) {
+			viewPage = "WEB-INF/jsp/" + viewPage + ".jsp";
+		}
+		
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 	}
